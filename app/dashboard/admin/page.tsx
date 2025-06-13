@@ -22,6 +22,7 @@ import {
   ArrowLeft,
   HelpCircle,
   Moon,
+  Icon,
 } from "lucide-react"
 
 export default function AdminPanel() {
@@ -422,15 +423,17 @@ export default function AdminPanel() {
     </div>
   )
 
-  const renderEmptyPage = (title: string, description: string, Icon: React.ComponentType<{ className?: string }>) => (
-    <div className="flex items-center justify-center h-96">
-      <div className="text-center">
-        {Icon && <Icon className="w-16 h-16 mx-auto mb-4 text-gray-300" />}
-        <h2 className="text-xl font-semibold text-gray-900 mb-2">{title}</h2>
-        <p className="text-gray-600">{description}</p>
+  const renderEmptyPage = (title: string, description: string, Icon?: React.ComponentType<{ className?: string }>) => {
+    return (
+      <div className="flex items-center justify-center h-96">
+        <div className="text-center">
+          {Icon && <Icon className="w-16 h-16 mx-auto mb-4 text-gray-300" />}
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">{title}</h2>
+          <p className="text-gray-600">{description}</p>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 flex">
