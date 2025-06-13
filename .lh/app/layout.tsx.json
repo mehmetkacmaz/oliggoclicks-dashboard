@@ -1,0 +1,22 @@
+{
+    "sourceFile": "app/layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1749775929248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1749776358638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,14 @@\n import type React from \"react\"\n import \"./globals.css\"\n import type { Metadata } from \"next\"\n import { Inter } from \"next/font/google\"\n-import { ThemeProvider } from \"@/components/theme-provider\"\n \n const inter = Inter({ subsets: [\"latin\"] })\n \n export const metadata: Metadata = {\n-  title: \"Oliggo - Sign In\",\n-  description: \"Sign in to your Oliggo account\",\n-    generator: 'v0.dev'\n+  title: \"Oliggo\",\n+  description: \"Welcome to Oliggo\",\n }\n \n export default function RootLayout({\n   children,\n@@ -18,18 +16,8 @@\n   children: React.ReactNode\n }>) {\n   return (\n     <html lang=\"en\" suppressHydrationWarning>\n-      <body className={inter.className}>\n-        <ThemeProvider\n-          attribute=\"class\"\n-          defaultTheme=\"light\"\n-          enableSystem={false}\n-          disableTransitionOnChange\n-          storageKey=\"oliggo-theme\"\n-        >\n-          {children}\n-        </ThemeProvider>\n-      </body>\n+      <body className={inter.className}>{children}</body>\n     </html>\n   )\n }\n"
+                }
+            ],
+            "date": 1749775929248,
+            "name": "Commit-0",
+            "content": "import type React from \"react\"\nimport \"./globals.css\"\nimport type { Metadata } from \"next\"\nimport { Inter } from \"next/font/google\"\nimport { ThemeProvider } from \"@/components/theme-provider\"\n\nconst inter = Inter({ subsets: [\"latin\"] })\n\nexport const metadata: Metadata = {\n  title: \"Oliggo - Sign In\",\n  description: \"Sign in to your Oliggo account\",\n    generator: 'v0.dev'\n}\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode\n}>) {\n  return (\n    <html lang=\"en\" suppressHydrationWarning>\n      <body className={inter.className}>\n        <ThemeProvider\n          attribute=\"class\"\n          defaultTheme=\"light\"\n          enableSystem={false}\n          disableTransitionOnChange\n          storageKey=\"oliggo-theme\"\n        >\n          {children}\n        </ThemeProvider>\n      </body>\n    </html>\n  )\n}\n"
+        }
+    ]
+}

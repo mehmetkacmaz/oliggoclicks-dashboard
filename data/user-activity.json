@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userId": "10324326-234243",
+      "ipAddress": "123.12.123131.2131",
+      "clicks": 4,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "ISP Fraud",
+      "mode": "Aggressive Mode",
+      "status": "Blocked",
+      "modeColor": "bg-red-100 text-red-800",
+      "statusColor": "text-red-600"
+    },
+    {
+      "id": 2,
+      "userId": "10324326-234243",
+      "ipAddress": "123.12.123131.2131",
+      "clicks": 4,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "VPN Fraud",
+      "mode": "Monitor Mode",
+      "status": "Block",
+      "modeColor": "bg-yellow-100 text-yellow-800",
+      "statusColor": "text-gray-600"
+    },
+    {
+      "id": 3,
+      "userId": "10324326-234243",
+      "ipAddress": "123.12.123131.2131",
+      "clicks": 1,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "",
+      "mode": "Safe Mode",
+      "status": "Block",
+      "modeColor": "bg-green-100 text-green-800",
+      "statusColor": "text-gray-600"
+    },
+    {
+      "id": 4,
+      "userId": "10324326-234243",
+      "ipAddress": "123.12.123131.2131",
+      "clicks": 3,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "",
+      "mode": "Safe Mode",
+      "status": "Block",
+      "modeColor": "bg-green-100 text-green-800",
+      "statusColor": "text-gray-600"
+    },
+    {
+      "id": 5,
+      "userId": "10324326-234243",
+      "ipAddress": "123.12.123131.2131",
+      "clicks": 3,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "VPN Fraud",
+      "mode": "Monitor Mode",
+      "status": "Block",
+      "modeColor": "bg-yellow-100 text-yellow-800",
+      "statusColor": "text-gray-600"
+    },
+    {
+      "id": 6,
+      "userId": "10324326-234243",
+      "ipAddress": "123.12.123131.2131",
+      "clicks": 1,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "",
+      "mode": "Safe Mode",
+      "status": "Block",
+      "modeColor": "bg-green-100 text-green-800",
+      "statusColor": "text-gray-600"
+    },
+    {
+      "id": 7,
+      "userId": "10324326-234243",
+      "ipAddress": "123.12.123131.2131",
+      "clicks": 4,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "ISP Fraud",
+      "mode": "Aggressive Mode",
+      "status": "Blocked",
+      "modeColor": "bg-red-100 text-red-800",
+      "statusColor": "text-red-600"
+    },
+    {
+      "id": 8,
+      "userId": "10324326-234243",
+      "ipAddress": "123.12.123131.2131",
+      "clicks": 4,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "ISP Fraud",
+      "mode": "Aggressive Mode",
+      "status": "Blocked",
+      "modeColor": "bg-red-100 text-red-800",
+      "statusColor": "text-red-600"
+    },
+    {
+      "id": 9,
+      "userId": "41241|2412-2121",
+      "ipAddress": "231.3213.12313",
+      "clicks": 1,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "IP Blocked",
+      "mode": "Monitor Mode",
+      "status": "Block",
+      "modeColor": "bg-yellow-100 text-yellow-800",
+      "statusColor": "text-gray-600"
+    },
+    {
+      "id": 10,
+      "userId": "41241|2412-2121",
+      "ipAddress": "231.3213.12313",
+      "clicks": 2,
+      "timestamp": "14 Jan 2024\n10:00 Eastern",
+      "fraudReason": "",
+      "mode": "Safe Mode",
+      "status": "Block",
+      "modeColor": "bg-green-100 text-green-800",
+      "statusColor": "text-gray-600"
+    }
+  ],
+  "totalEntries": 30
+}

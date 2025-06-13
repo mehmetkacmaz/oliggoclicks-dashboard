@@ -1,0 +1,22 @@
+{
+    "sourceFile": "next.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1749781122409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1749832651782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,1 @@\n-/** @type {import('next').NextConfig} */\r\n-const nextConfig = {\r\n-  basePath: '/dashboard',\r\n-  assetPrefix: '/dashboard/',\r\n-  output: 'standalone',\r\n-  images: {\r\n-    domains: ['oliggoclicks.com'],\r\n-  },\r\n-}\r\n-\r\n-module.exports = nextConfig \n\\ No newline at end of file\n+ \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1749781122409,
+            "name": "Commit-0",
+            "content": "/** @type {import('next').NextConfig} */\r\nconst nextConfig = {\r\n  basePath: '/dashboard',\r\n  assetPrefix: '/dashboard/',\r\n  output: 'standalone',\r\n  images: {\r\n    domains: ['oliggoclicks.com'],\r\n  },\r\n}\r\n\r\nmodule.exports = nextConfig "
+        }
+    ]
+}

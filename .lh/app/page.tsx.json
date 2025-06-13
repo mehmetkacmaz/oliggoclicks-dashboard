@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1749776425126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1749776425126,
+            "name": "Commit-0",
+            "content": "\"use client\"\n\nimport { redirect } from 'next/navigation'\n\nexport default function Home() {\n  redirect('/dashboard/login')\n}\n"
+        }
+    ]
+}

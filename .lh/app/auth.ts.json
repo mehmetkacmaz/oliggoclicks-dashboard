@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/auth.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1749776218655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1749776230154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import NextAuth from \"next-auth\"\r\n import Credentials from \"next-auth/providers/credentials\"\r\n-import { compare } from \"bcrypt\"\r\n+import { compare, hash } from \"bcrypt\"\r\n \r\n export const {\r\n   handlers: { GET, POST },\r\n   auth,\r\n"
+                },
+                {
+                    "date": 1749776295490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,57 +1,1 @@\n-import NextAuth from \"next-auth\"\r\n-import Credentials from \"next-auth/providers/credentials\"\r\n-import { compare, hash } from \"bcrypt\"\r\n-\r\n-export const {\r\n-  handlers: { GET, POST },\r\n-  auth,\r\n-  signIn,\r\n-  signOut,\r\n-} = NextAuth({\r\n-  pages: {\r\n-    signIn: \"/login\",\r\n-  },\r\n-  callbacks: {\r\n-    authorized({ auth, request: { nextUrl } }) {\r\n-      const isLoggedIn = !!auth?.user\r\n-      const isOnDashboard = nextUrl.pathname.startsWith(\"/dashboard\")\r\n-      if (isOnDashboard) {\r\n-        if (isLoggedIn) return true\r\n-        return false\r\n-      } else if (isLoggedIn) {\r\n-        return Response.redirect(new URL(\"/dashboard\", nextUrl))\r\n-      }\r\n-      return true\r\n-    },\r\n-  },\r\n-  providers: [\r\n-    Credentials({\r\n-      async authorize(credentials) {\r\n-        if (!credentials?.email || !credentials?.password) {\r\n-          return null\r\n-        }\r\n-\r\n-        // Burada veritabanından kullanıcıyı çekeceğiz\r\n-        // Şimdilik test için sabit bir kullanıcı kullanıyoruz\r\n-        const user = {\r\n-          id: \"1\",\r\n-          email: \"test@example.com\",\r\n-          password: await hash(\"password123\", 10),\r\n-          name: \"Test User\",\r\n-        }\r\n-\r\n-        const isPasswordValid = await compare(credentials.password, user.password)\r\n-\r\n-        if (!isPasswordValid) {\r\n-          return null\r\n-        }\r\n-\r\n-        return {\r\n-          id: user.id,\r\n-          email: user.email,\r\n-          name: user.name,\r\n-        }\r\n-      },\r\n-    }),\r\n-  ],\r\n-}) \n\\ No newline at end of file\n+ \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1749776218655,
+            "name": "Commit-0",
+            "content": "import NextAuth from \"next-auth\"\r\nimport Credentials from \"next-auth/providers/credentials\"\r\nimport { compare } from \"bcrypt\"\r\n\r\nexport const {\r\n  handlers: { GET, POST },\r\n  auth,\r\n  signIn,\r\n  signOut,\r\n} = NextAuth({\r\n  pages: {\r\n    signIn: \"/login\",\r\n  },\r\n  callbacks: {\r\n    authorized({ auth, request: { nextUrl } }) {\r\n      const isLoggedIn = !!auth?.user\r\n      const isOnDashboard = nextUrl.pathname.startsWith(\"/dashboard\")\r\n      if (isOnDashboard) {\r\n        if (isLoggedIn) return true\r\n        return false\r\n      } else if (isLoggedIn) {\r\n        return Response.redirect(new URL(\"/dashboard\", nextUrl))\r\n      }\r\n      return true\r\n    },\r\n  },\r\n  providers: [\r\n    Credentials({\r\n      async authorize(credentials) {\r\n        if (!credentials?.email || !credentials?.password) {\r\n          return null\r\n        }\r\n\r\n        // Burada veritabanından kullanıcıyı çekeceğiz\r\n        // Şimdilik test için sabit bir kullanıcı kullanıyoruz\r\n        const user = {\r\n          id: \"1\",\r\n          email: \"test@example.com\",\r\n          password: await hash(\"password123\", 10),\r\n          name: \"Test User\",\r\n        }\r\n\r\n        const isPasswordValid = await compare(credentials.password, user.password)\r\n\r\n        if (!isPasswordValid) {\r\n          return null\r\n        }\r\n\r\n        return {\r\n          id: user.id,\r\n          email: user.email,\r\n          name: user.name,\r\n        }\r\n      },\r\n    }),\r\n  ],\r\n}) "
+        }
+    ]
+}

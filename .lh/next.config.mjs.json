@@ -1,0 +1,26 @@
+{
+    "sourceFile": "next.config.mjs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1749832895477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1749833014382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n /** @type {import('next').NextConfig} */\n const nextConfig = {\n+  typescript: {\n+    ignoreBuildErrors: true,\n+  },\n   images: {\n     unoptimized: true,\n   },\n }\n"
+                },
+                {
+                    "date": 1749833687523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n /** @type {import('next').NextConfig} */\n const nextConfig = {\n-  typescript: {\n-    ignoreBuildErrors: true,\n-  },\n+  output: 'standalone',\n+  basePath: '/dashboard',\n+  assetPrefix: '/dashboard/',\n   images: {\n-    unoptimized: true,\n-  },\n+    domains: ['localhost'],\n+    unoptimized: true\n+  }\n }\n \n export default nextConfig\n"
+                }
+            ],
+            "date": 1749832895477,
+            "name": "Commit-0",
+            "content": "/** @type {import('next').NextConfig} */\nconst nextConfig = {\n  images: {\n    unoptimized: true,\n  },\n}\n\nexport default nextConfig\n"
+        }
+    ]
+}
