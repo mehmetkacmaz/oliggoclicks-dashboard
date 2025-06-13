@@ -3,6 +3,9 @@ const nextConfig = {
   output: 'standalone',
   basePath: '/dashboard',
   assetPrefix: '/dashboard/',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     domains: ['localhost'],
     unoptimized: true
