@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1749832895477,
@@ -16,6 +16,14 @@
                 {
                     "date": 1749833687523,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n /** @type {import('next').NextConfig} */\n const nextConfig = {\n-  typescript: {\n-    ignoreBuildErrors: true,\n-  },\n+  output: 'standalone',\n+  basePath: '/dashboard',\n+  assetPrefix: '/dashboard/',\n   images: {\n-    unoptimized: true,\n-  },\n+    domains: ['localhost'],\n+    unoptimized: true\n+  }\n }\n \n export default nextConfig\n"
+                },
+                {
+                    "date": 1749834910531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,11 @@\n const nextConfig = {\n   output: 'standalone',\n   basePath: '/dashboard',\n   assetPrefix: '/dashboard/',\n+  typescript: {\n+    ignoreBuildErrors: true,\n+  },\n   images: {\n     domains: ['localhost'],\n     unoptimized: true\n   }\n"
+                },
+                {
+                    "date": 1749835456356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n   assetPrefix: '/dashboard/',\n   typescript: {\n     ignoreBuildErrors: true,\n   },\n+  eslint: {\n+    ignoreDuringBuilds: true,\n+  },\n   images: {\n     domains: ['localhost'],\n     unoptimized: true\n   }\n"
                 }
             ],
             "date": 1749832895477,
