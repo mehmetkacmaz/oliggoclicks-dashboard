@@ -247,45 +247,6 @@ export default function AdminPanel() {
           </div>
         </div>
       </div>
-
-      {/* Bottom Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Recent Users */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Recent Users</h3>
-          <p className="text-sm text-gray-600 mb-6">Latest user registrations</p>
-          <div className="flex items-center justify-center h-32 text-gray-500">
-            <div className="text-center">
-              <Users className="w-8 h-8 mx-auto mb-2 text-gray-300" />
-              <p className="text-sm">No recent users</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Security Alerts */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Alerts</h3>
-          <p className="text-sm text-gray-600 mb-6">Recent security notifications</p>
-          <div className="flex items-center justify-center h-32 text-gray-500">
-            <div className="text-center">
-              <Shield className="w-8 h-8 mx-auto mb-2 text-gray-300" />
-              <p className="text-sm">No security alerts</p>
-            </div>
-          </div>
-        </div>
-
-        {/* System Notifications */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">System Notifications</h3>
-          <p className="text-sm text-gray-600 mb-6">Important system messages</p>
-          <div className="flex items-center justify-center h-32 text-gray-500">
-            <div className="text-center">
-              <Bell className="w-8 h-8 mx-auto mb-2 text-gray-300" />
-              <p className="text-sm">No system notifications</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 
@@ -295,129 +256,92 @@ export default function AdminPanel() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">User Management</h1>
-          <p className="text-gray-600 mt-1">Manage and monitor user accounts in your system.</p>
+          <p className="text-gray-600 mt-1">Manage user accounts and permissions</p>
         </div>
         <button
           onClick={() => setIsAddUserModalOpen(true)}
-          className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-200 flex items-center space-x-2"
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
         >
-          <Plus className="w-4 h-4" />
+          <Plus className="w-5 h-5" />
           <span>Add User</span>
         </button>
       </div>
 
       {/* Filters */}
-      <div className="flex items-center justify-between">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
         <div className="flex items-center space-x-4">
-          {["All Users", "Admins", "Basic Users", "Active", "Inactive"].map((filter) => (
-            <button
-              key={filter}
-              className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                filter === "All Users"
-                  ? "bg-blue-100 text-blue-700"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-        <div className="flex items-center space-x-3">
-          <div className="relative">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search users..."
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
+          <div className="flex-1">
+            <div className="relative">
+              <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
+              <input
+                type="text"
+                placeholder="Search users..."
+                className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
           </div>
-          <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-            <Filter className="w-4 h-4 text-gray-600" />
+          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <Filter className="w-5 h-5 text-gray-600" />
           </button>
-          <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-            <Download className="w-4 h-4 text-gray-600" />
+          <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200">
+            <Download className="w-5 h-5 text-gray-600" />
           </button>
         </div>
       </div>
 
       {/* Users Table */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-        <table className="w-full">
-          <thead className="bg-gray-50 border-b border-gray-200">
-            <tr>
-              <th className="px-6 py-3 text-left">
-                <input type="checkbox" className="rounded border-gray-300" />
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Last Login
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Created
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Actions
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {users.map((user) => (
-              <tr key={user.id} className="hover:bg-gray-50 transition-colors duration-150">
-                <td className="px-6 py-4">
-                  <input type="checkbox" className="rounded border-gray-300" />
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm font-medium text-gray-900">{user.name}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-500">{user.email}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span
-                    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                      user.type === "Admin" ? "bg-purple-100 text-purple-800" : "bg-gray-100 text-gray-800"
-                    }`}
-                  >
-                    {user.type === "Admin" ? <Shield className="w-3 h-3 mr-1" /> : <Users className="w-3 h-3 mr-1" />}
-                    {user.type}
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span
-                    className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                      user.status === "Active" ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"
-                    }`}
-                  >
-                    {user.status}
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{user.lastLogin}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{user.created}</td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <button className="text-gray-400 hover:text-gray-600 transition-colors duration-200">
-                    <MoreHorizontal className="w-5 h-5" />
-                  </button>
-                </td>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="bg-gray-50 border-b border-gray-200">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Login</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Created</th>
+                <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-
-        {/* Pagination */}
-        <div className="bg-white px-6 py-3 border-t border-gray-200 flex items-center justify-between">
-          <div className="text-sm text-gray-700">Showing 1 to 5 of 5 users</div>
-          <div className="flex items-center space-x-2">
-            <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50 disabled:opacity-50">
-              Previous
-            </button>
-            <button className="px-3 py-1 bg-blue-500 text-white border border-blue-500 rounded text-sm">1</button>
-            <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50 disabled:opacity-50">
-              Next
-            </button>
-          </div>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              {users.map((user) => (
+                <tr key={user.id} className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-medium">{user.name.charAt(0)}</span>
+                      </div>
+                      <div className="ml-4">
+                        <div className="text-sm font-medium text-gray-900">{user.name}</div>
+                        <div className="text-sm text-gray-500">{user.email}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                      {user.type}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span
+                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                        user.status === "Active" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
+                      }`}
+                    >
+                      {user.status}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{user.lastLogin}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{user.created}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <button className="text-gray-400 hover:text-gray-600">
+                      <MoreHorizontal className="w-5 h-5" />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -621,25 +545,17 @@ export default function AdminPanel() {
                   id="sendWelcomeEmail"
                   checked={newUser.sendWelcomeEmail}
                   onChange={(e) => setNewUser({ ...newUser, sendWelcomeEmail: e.target.checked })}
-                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                 />
-                <label htmlFor="sendWelcomeEmail" className="text-sm font-medium text-gray-700">
-                  Send welcome email
+                <label htmlFor="sendWelcomeEmail" className="text-sm text-gray-700">
+                  Send welcome email to the user
                 </label>
               </div>
-            </div>
 
-            {/* Action Buttons */}
-            <div className="flex justify-end space-x-3 mt-8">
-              <button
-                onClick={() => setIsAddUserModalOpen(false)}
-                className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-              >
-                Cancel
-              </button>
+              {/* Submit Button */}
               <button
                 onClick={handleAddUser}
-                className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
               >
                 Add User
               </button>
