@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1749781847349,
@@ -44,6 +44,10 @@
                 {
                     "date": 1749891659788,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n   ArrowLeft,\n   HelpCircle,\n   Moon,\n } from \"lucide-react\"\n+import { LucideIcon } from \"lucide-react\"\n \n export default function AdminPanel() {\n   const [activeTab, setActiveTab] = useState(\"Dashboard\")\n   const [isAddUserModalOpen, setIsAddUserModalOpen] = useState(false)\n@@ -421,12 +422,12 @@\n       </div>\n     </div>\n   )\n \n-  const renderEmptyPage = (title: string, description: string, Icon: React.ComponentType<{ className?: string }>) => (\n+  const renderEmptyPage = (title: string, description: string, Icon: LucideIcon) => (\n     <div className=\"flex items-center justify-center h-96\">\n       <div className=\"text-center\">\n-        {Icon && <Icon className=\"w-16 h-16 mx-auto mb-4 text-gray-300\" />}\n+        <Icon className=\"w-16 h-16 mx-auto mb-4 text-gray-300\" />\n         <h2 className=\"text-xl font-semibold text-gray-900 mb-2\">{title}</h2>\n         <p className=\"text-gray-600\">{description}</p>\n       </div>\n     </div>\n"
+                },
+                {
+                    "date": 1749892308156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,8 @@\n   ArrowLeft,\n   HelpCircle,\n   Moon,\n } from \"lucide-react\"\n-import { LucideIcon } from \"lucide-react\"\n \n export default function AdminPanel() {\n   const [activeTab, setActiveTab] = useState(\"Dashboard\")\n   const [isAddUserModalOpen, setIsAddUserModalOpen] = useState(false)\n@@ -422,12 +421,12 @@\n       </div>\n     </div>\n   )\n \n-  const renderEmptyPage = (title: string, description: string, Icon: LucideIcon) => (\n+  const renderEmptyPage = (title: string, description: string, icon: any) => (\n     <div className=\"flex items-center justify-center h-96\">\n       <div className=\"text-center\">\n-        <Icon className=\"w-16 h-16 mx-auto mb-4 text-gray-300\" />\n+        {icon && <icon className=\"w-16 h-16 mx-auto mb-4 text-gray-300\" />}\n         <h2 className=\"text-xl font-semibold text-gray-900 mb-2\">{title}</h2>\n         <p className=\"text-gray-600\">{description}</p>\n       </div>\n     </div>\n"
                 }
             ],
             "date": 1749781847349,

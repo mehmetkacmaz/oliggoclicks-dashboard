@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1749835630182,
@@ -16,6 +16,10 @@
                 {
                     "date": 1749891618450,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\n-  \"name\": \"my-v0-project\",\n+  \"name\": \"oliggo-project\",\n   \"version\": \"0.1.0\",\n   \"private\": true,\n   \"scripts\": {\n     \"dev\": \"next dev\",\n"
+                },
+                {
+                    "date": 1749892308210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n {\n-  \"name\": \"oliggo-project\",\n+  \"name\": \"my-v0-project\",\n   \"version\": \"0.1.0\",\n   \"private\": true,\n   \"scripts\": {\n     \"dev\": \"next dev\",\n-    \"build\": \"next build --no-lint --no-typescript\",\n+    \"build\": \"next build\",\n     \"start\": \"next start\",\n     \"lint\": \"next lint\"\n   },\n   \"dependencies\": {\n"
                 }
             ],
             "date": 1749835630182,
