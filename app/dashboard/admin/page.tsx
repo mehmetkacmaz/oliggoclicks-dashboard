@@ -23,6 +23,7 @@ import {
   HelpCircle,
   Moon,
 } from "lucide-react"
+import { LucideIcon } from "lucide-react"
 
 export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState("Dashboard")
@@ -422,10 +423,10 @@ export default function AdminPanel() {
     </div>
   )
 
-  const renderEmptyPage = (title: string, description: string, Icon: React.ComponentType<{ className?: string }>) => (
+  const renderEmptyPage = (title: string, description: string, Icon: LucideIcon) => (
     <div className="flex items-center justify-center h-96">
       <div className="text-center">
-        {Icon && <Icon className="w-16 h-16 mx-auto mb-4 text-gray-300" />}
+        <Icon className="w-16 h-16 mx-auto mb-4 text-gray-300" />
         <h2 className="text-xl font-semibold text-gray-900 mb-2">{title}</h2>
         <p className="text-gray-600">{description}</p>
       </div>
