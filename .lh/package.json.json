@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1750107776591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1750107776591,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"oliggo\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\",\n    \"lint\": \"next lint\"\n  },\n  \"dependencies\": {\n    \"@hookform/resolvers\": \"^3.9.1\",\n    \"@radix-ui/react-accordion\": \"latest\",\n    \"@radix-ui/react-alert-dialog\": \"latest\",\n    \"@radix-ui/react-aspect-ratio\": \"latest\",\n    \"@radix-ui/react-avatar\": \"latest\",\n    \"@radix-ui/react-checkbox\": \"latest\",\n    \"@radix-ui/react-collapsible\": \"latest\",\n    \"@radix-ui/react-context-menu\": \"latest\",\n    \"@radix-ui/react-dialog\": \"latest\",\n    \"@radix-ui/react-dropdown-menu\": \"latest\",\n    \"@radix-ui/react-hover-card\": \"latest\",\n    \"@radix-ui/react-label\": \"latest\",\n    \"@radix-ui/react-menubar\": \"latest\",\n    \"@radix-ui/react-navigation-menu\": \"latest\",\n    \"@radix-ui/react-popover\": \"latest\",\n    \"@radix-ui/react-progress\": \"latest\",\n    \"@radix-ui/react-radio-group\": \"latest\",\n    \"@radix-ui/react-scroll-area\": \"latest\",\n    \"@radix-ui/react-select\": \"latest\",\n    \"@radix-ui/react-separator\": \"latest\",\n    \"@radix-ui/react-slider\": \"latest\",\n    \"@radix-ui/react-slot\": \"latest\",\n    \"@radix-ui/react-switch\": \"latest\",\n    \"@radix-ui/react-tabs\": \"latest\",\n    \"@radix-ui/react-toast\": \"latest\",\n    \"@radix-ui/react-toggle\": \"latest\",\n    \"@radix-ui/react-toggle-group\": \"latest\",\n    \"@radix-ui/react-tooltip\": \"latest\",\n    \"autoprefixer\": \"^10.4.20\",\n    \"class-variance-authority\": \"^0.7.1\",\n    \"clsx\": \"^2.1.1\",\n    \"cmdk\": \"latest\",\n    \"date-fns\": \"4.1.0\",\n    \"embla-carousel-react\": \"latest\",\n    \"input-otp\": \"latest\",\n    \"lucide-react\": \"^0.454.0\",\n    \"next\": \"15.2.4\",\n    \"next-themes\": \"latest\",\n    \"react\": \"^19\",\n    \"react-day-picker\": \"latest\",\n    \"react-dom\": \"^19\",\n    \"react-hook-form\": \"latest\",\n    \"react-resizable-panels\": \"latest\",\n    \"recharts\": \"latest\",\n    \"sonner\": \"latest\",\n    \"tailwind-merge\": \"^2.5.5\",\n    \"tailwindcss-animate\": \"^1.0.7\",\n    \"vaul\": \"latest\",\n    \"zod\": \"^3.24.1\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"^22\",\n    \"@types/react\": \"^19\",\n    \"@types/react-dom\": \"^19\",\n    \"postcss\": \"^8.5\",\n    \"tailwindcss\": \"^3.4.17\",\n    \"typescript\": \"^5\"\n  }\n}"
+        }
+    ]
+}

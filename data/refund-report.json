@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "allTimeRefund": "$300",
+    "nextRefundDate": "05/01/2025"
+  },
+  "weeks": [
+    {
+      "id": 1,
+      "week": "Week 10",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week10"
+    },
+    {
+      "id": 2,
+      "week": "Week 9",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week9"
+    },
+    {
+      "id": 3,
+      "week": "Week 8",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week8"
+    },
+    {
+      "id": 4,
+      "week": "Week 7",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week7"
+    },
+    {
+      "id": 5,
+      "week": "Week 6",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week6"
+    },
+    {
+      "id": 6,
+      "week": "Week 5",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week5"
+    },
+    {
+      "id": 7,
+      "week": "Week 4",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week4"
+    },
+    {
+      "id": 8,
+      "week": "Week 3",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week3"
+    },
+    {
+      "id": 9,
+      "week": "Week 2",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week2"
+    },
+    {
+      "id": 10,
+      "week": "Week 1",
+      "startDate": "14 Jan 2024",
+      "startTime": "10:00 Eastern",
+      "endDate": "14 Jan 2024",
+      "endTime": "10:00 Eastern",
+      "refundAmount": "$150",
+      "link": "https://example.com/refund/week1"
+    }
+  ]
+}
