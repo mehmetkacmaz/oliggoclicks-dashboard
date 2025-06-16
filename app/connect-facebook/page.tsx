@@ -3,9 +3,11 @@
 import Image from "next/image"
 import { Facebook, ChevronDown, User, Settings, LogOut } from "lucide-react"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 export default function ConnectFacebookPage() {
   const [isProfileOpen, setIsProfileOpen] = useState(false)
+  const router = useRouter();
 
   return (
     <div className="min-h-screen w-full bg-gray-50 relative">
@@ -148,6 +150,7 @@ export default function ConnectFacebookPage() {
               <button
                 type="button"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-lg transition duration-200 text-lg flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl"
+                onClick={() => router.push('/home')}
               >
                 <Facebook className="w-6 h-6" />
                 <span>Sign In with Facebook</span>

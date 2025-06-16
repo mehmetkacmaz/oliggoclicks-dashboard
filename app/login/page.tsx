@@ -12,7 +12,7 @@ export default function LoginPage() {
     e.preventDefault()
     // Here you would typically handle authentication
     // For now, we'll just navigate to the home page
-    router.push('/home')
+    router.push('/connect-facebook')
   }
 
   return (

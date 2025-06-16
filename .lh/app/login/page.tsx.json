@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1750105251715,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1750109428133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   const handleSubmit = (e: React.FormEvent) => {\n     e.preventDefault()\n     // Here you would typically handle authentication\n     // For now, we'll just navigate to the home page\n-    router.push('/home')\n+    router.push('/connect-facebook')\n   }\n \n   return (\n     <div className=\"min-h-screen w-full bg-gray-100 flex items-center justify-center p-4\">\n"
                 }
             ],
             "date": 1750105251715,
